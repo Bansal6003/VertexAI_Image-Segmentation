@@ -1,0 +1,5 @@
+# torch, torchvision, numpy, Pillow already in the base DL container
+segmentation-models-pytorch==0.3.3
+scikit-learn==1.4.2
+google-cloud-storage==2.17.0
+google-cloud-aiplatform==1.54.0

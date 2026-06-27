@@ -1,0 +1,22 @@
+# ============================================================
+# Training container for Vertex AI Custom Training
+# Base: NVIDIA CUDA + Python 3.11 (GPU training)
+# ============================================================
+# Vertex AI prebuilt PyTorch 2.3 GPU container — cached on all Vertex AI VMs
+FROM us-docker.pkg.dev/vertex-ai/training/pytorch-gpu.2-3.py310:latest
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Only install packages NOT already in the base image
+COPY requirements.train.txt .
+RUN pip install --no-cache-dir -r requirements.train.txt
+
+# Copy trainer package
+COPY trainer/ ./trainer/
+
+# Vertex AI runs the container with the args you specify in the job spec.
+# Entrypoint calls train.py as a module so relative imports work.
+ENTRYPOINT ["python", "-m", "trainer.train"]
