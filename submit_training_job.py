@@ -14,7 +14,7 @@ from google.cloud import aiplatform
 # ============================================================
 # FILL IN THESE VALUES
 # ============================================================
-PROJECT_ID     = "project-4484f804-b862-439c-835"
+PROJECT_ID     = "project-name"
 REGION         = "us-central1"
 BUCKET         = "larva-segmennt_training"          # without gs://
 IMAGES_PREFIX  = "larva_images"               # GCS prefix inside bucket
@@ -41,7 +41,7 @@ ARGS = [
     "--masks-prefix",    MASKS_PREFIX,
     "--encoder",         "resnet18",
     "--encoder-weights", "imagenet",
-    "--epochs",          "50",
+    "--epochs",          "300",
     "--batch-size",      "64",
     "--lr",              "1e-4",
     "--weight-decay",    "1e-6",
