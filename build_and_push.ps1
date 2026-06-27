@@ -4,7 +4,7 @@
 #
 # FILL IN THESE VALUES BEFORE RUNNING:
 # ============================================================
-$PROJECT_ID   = "project-4484f804-b862-439c-835"
+$PROJECT_ID   = "project-name"
 $REGION       = "us-central1"
 $REPO_NAME    = "larva-seg"         # Artifact Registry repo name (will be created)
 $IMAGE_TRAIN  = "larva-seg-train"
