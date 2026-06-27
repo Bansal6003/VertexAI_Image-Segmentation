@@ -16,7 +16,7 @@ from google.cloud import aiplatform
 # ============================================================
 # FILL IN THESE VALUES
 # ============================================================
-PROJECT_ID   = "project-4484f804-b862-439c-835"
+PROJECT_ID   = "project-name"
 REGION       = "us-central1"
 BUCKET       = "larva-segmennt_training"
 
